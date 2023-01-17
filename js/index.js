@@ -50,12 +50,29 @@ let longText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
 "Integer gravida egestas dolor viverra congue. Nullam euismod, neque sed eleifend ullamcorper, libero justo auctor justo, eu porta enim urna sit amet urna. Aenean eget nunc quis est tincidunt eleifend in vitae eros. Nullam malesuada diam sit amet leo tincidunt, vitae maximus augue semper. Etiam feugiat vel mauris non pharetra. Duis ornare fringilla leo, nec sodales mi venenatis a. Nam ultricies ultricies hendrerit. Vivamus aliquet erat enim, nec tincidunt libero aliquam eget. Praesent pellentesque maximus ante, et congue massa dignissim nec. Vestibulum maximus ut augue eu aliquam. Donec eu condimentum enim. Nullam tempus pharetra ligula. Vestibulum tempus risus ac enim auctor, eget tristique dolor dapibus. " +
 "Nullam turpis augue, consequat sit amet sem lacinia, auctor scelerisque est. Nulla faucibus quam vitae sapien varius, vitae fringilla sapien rutrum. Proin imperdiet, arcu id consectetur feugiat, est arcu gravida nibh, in venenatis nisl est ut dui. Vestibulum tellus diam, ultrices quis dapibus auctor, auctor id turpis. Vivamus quis urna eu lacus ullamcorper hendrerit eu in purus. Fusce venenatis ante eget libero fringilla tincidunt. Maecenas libero leo, fringilla eu urna quis, blandit hendrerit magna. Morbi pharetra lectus eu tortor placerat commodo. Etiam in facilisis enim."
 
-let emptySpace = 0;
+
+//esto era para contar las letras sin los espacios -.-
+/*let emptySpace = 0;
 for (let u = 0; u < longText.length; u++){
     if(longText[u] !== " "){
         emptySpace++;
     }
 }
-console.log(emptySpace);
+console.log(emptySpace); */ 
+
+
+
+let count = 0;
+let justWords = false;
+
+for (let i = 0; i < longText.length; i++) {
+  if (longText[i] === " " || longText[i] === "," || longText[i] === ".") {
+    justWords = false;
+  } else if (justWords === false){
+    count++;
+    justWords = true
+  }
+}
+console.log(count);
 
 
