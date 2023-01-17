@@ -13,7 +13,7 @@ console.log(`The navigator's name is ${hacker2}`);
 
   if (hacker1.length > hacker2.length) {
     console.log(`The driver has the longest name, it has ${hacker1.length} characters`)
-} else if (hacker2.length > hacker1.length) {
+} else if (hacker1.length < hacker2.length) {
     console.log(`It seems that the navigator has the longest name, it has ${hacker2.length} characters`)
 } else if (hacker1.length === hacker2.length) {
     console.log(`Wow, you both have equally long names ${hacker1.length && hacker2.length} characters!`)
@@ -26,14 +26,14 @@ let upperNameOfTheDriver = "";
 for (let i = 0; i < hacker1.length; i++){
     upperNameOfTheDriver += hacker1[i] + " ";
 }
-console.log(upperNameOfTheDriver.toUpperCase()); //revisar
+console.log(upperNameOfTheDriver.toUpperCase()); 
 
 let reverseHacker2 = "";
 
 for (let p = hacker2.length -1; p >= 0; p--){
     reverseHacker2 += hacker2[p]
 }
-console.log(reverseHacker2); //revisar
+console.log(reverseHacker2); 
 
 if (hacker1 < hacker2){
     console.log("The driver's name goes first");
